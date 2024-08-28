@@ -8,11 +8,11 @@ export default function ProductName({
   isAvailable,
 }: ProductNameProps) {
 
-  const statusClassNames = 'font-outfit font-normal text-[#767676] text-[12px] lg:text-[15px] w-fit mt-5'  
+  const statusClassNames = 'font-outfit font-normal text-[#767676] text-[12px] lg:text-[15px] w-fit md:mt-5'  
 
 
   return (
-    <div className="w-full flex flex-nowrap gap-3">
+    <div className="w-full flex flex-col md:flex-row flex-nowrap gap-5">
       <h1 className="font-outfit font-bold text-[25px] lg:text-[40px] text-[#000000] flex-1">
         {nameProduct}
       </h1>

@@ -18,12 +18,12 @@ export interface TypeProduct {
 }
 
 export default async function Home() {
-  const products = await GetProducts<TypeProduct[]>();
+  const products = await GetProducts<TypeProduct[]>(10);
 
   return (
     <div className="pb-32">
       <TitlePage label="Shop"/>
-      <div className="pt-10">
+      <div className="pt-10 lg:px-5 flex justify-center">
         <LayoutProduct products={Array.isArray(products) ? products : []} />
       </div>
     </div>
