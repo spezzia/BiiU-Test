@@ -13,7 +13,7 @@ export default function ButtonFavorite({ className }: ButtonFavoriteProps) {
   return (
     <button
       type='button'
-      className={`w-[25px] h-[25px] md:w-[35px] md:h-[35px] flex items-center justify-center bg-black rounded-full cursor-pointer hover:opacity-90 ${className}`}
+      className={`w-[25px] h-[25px] md:w-[35px] md:h-[35px] flex items-center justify-center bg-buttonDark rounded-full cursor-pointer hover:opacity-90 ${className}`}
       onClick={(e) => {
         setIsFav(!fav);
         e.preventDefault();

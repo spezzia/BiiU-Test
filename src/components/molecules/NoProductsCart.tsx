@@ -4,7 +4,7 @@ import { IoCartOutline } from 'react-icons/io5';
 export default function NoProductsCart() {
   return (
     <div className='w-full flex flex-col justify-center items-center'>
-      <IoCartOutline className='text-[120px] text-[#94A3B8]' />
+      <IoCartOutline className='text-[120px] text-textDisable' />
       <div className='h-[50px]' />
       <p className='font-outfit font-semibold text-[18px] lg:text-[25px] text-black text-center'>
         It looks like you haven’t selected any products yet. Feel free to browse

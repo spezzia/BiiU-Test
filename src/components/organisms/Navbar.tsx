@@ -8,8 +8,8 @@ export default function Navbar() {
     <nav className='w-full py-6 px-10 sticky top-0 bg-white z-50 flex items-center justify-between webkit-sticky border-b-2 border-bgImageProduct'>
       <PathName href='/' path='Home' />
       <div className='flex flex-row gap-5'>
-        <IoSearchOutline className='text-[25px] text-[#94A3B8]' />
-        <IoPersonOutline className='text-[25px] text-[#94A3B8]' />
+        <IoSearchOutline className='text-[25px] text-iconPrimary' />
+        <IoPersonOutline className='text-[25px] text-iconPrimary' />
         <CartItemsNavigation />
       </div>
     </nav>

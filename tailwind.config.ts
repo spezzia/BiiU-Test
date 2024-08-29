@@ -12,7 +12,18 @@ const config: Config = {
         outfit: ['var(--font-outfit)'],
       },
       colors: {
-        bgImageProduct: '#F6F6F6'
+        bgImageProduct: '#F6F6F6',
+        bgHeaders: '#CBD5E1',
+        bgBadge: '#EB6383',
+        buttonPrimary: '#059669',
+        buttonDark: '#000000',
+        buttonSecondary: '#EB6383',
+        textPrimary: '#334155',
+        textSecondary: '#10B981',
+        textDark: '#0F172A',
+        textDisable: '#767676',
+        borderPrimary: '#767676',
+        iconPrimary: '#94A3B8',
       }
     },
   },

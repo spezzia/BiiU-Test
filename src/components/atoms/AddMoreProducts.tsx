@@ -40,7 +40,7 @@ export default function AddMoreProducts({
 
   return (
     <button
-      className='bg-black w-fit h-fit px-4 py-2 rounded-lg hover:opacity-80'
+      className='bg-buttonDark w-fit h-fit px-4 py-2 rounded-lg hover:opacity-80'
       onClick={handleGetProducts}
       aria-label='Load more products'
     >

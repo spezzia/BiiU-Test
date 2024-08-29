@@ -13,7 +13,7 @@ export default function PathName({ href, path }: PathNameProps) {
 
   let pathClassName = 'font-outfit font-bold';
   if (pathName === href) {
-    pathClassName += ' text-[#10B981]';
+    pathClassName += ' text-textSecondary';
   } else {
     pathClassName += ' text-black';
   }

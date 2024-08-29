@@ -1,8 +1,8 @@
 import {
   ProductActionKind,
   useCartShop,
-} from "@/context/CartShop/CartShopContext";
-import { FormEvent } from "react";
+} from '@/context/CartShop/CartShopContext';
+import { FormEvent } from 'react';
 
 interface InputNumberItemsProps {
   defaultValue: number;
@@ -17,7 +17,7 @@ export default function InputNumberItems({
 
   const validNumberItems = (e: FormEvent<HTMLInputElement>) => {
     let value = e.currentTarget.value;
-    let valueNum = Number(value.replaceAll(/[^0-9]/g, ""));
+    let valueNum = Number(value.replaceAll(/[^0-9]/g, ''));
     if (!isNaN(valueNum)) {
       if (valueNum < 100) {
         e.currentTarget.value = `${valueNum}`;
@@ -25,7 +25,7 @@ export default function InputNumberItems({
       }
       e.currentTarget.value = `99`;
     } else {
-      e.currentTarget.value = "";
+      e.currentTarget.value = '';
     }
   };
 
@@ -34,22 +34,22 @@ export default function InputNumberItems({
     if (prod !== undefined) {
       prod = {
         ...prod,
-        quantity: Number(e.currentTarget.value)
-      }
+        quantity: Number(e.currentTarget.value),
+      };
       actionProduct({ type: ProductActionKind.update, product: prod });
     }
   };
 
   return (
-    <div className="w-[68px] border-[1px] border-[#767676] rounded-[5px] p-1">
+    <div className='w-[68px] border-[1px] border-borderPrimary rounded-[5px] p-1'>
       <input
         defaultValue={defaultValue}
         onInput={validNumberItems}
         min={0}
         max={100}
-        type="number"
+        type='number'
         onBlur={updateProduct}
-        className="w-full focus:outline-none font-outfit text-[20px] px-2"
+        className='w-full focus:outline-none font-outfit text-[20px] px-2'
       />
     </div>
   );

@@ -46,7 +46,7 @@ export default function AddToCard({ product }: AddToCardProps) {
     return (
       <button
         onClick={handleDeleteProduct}
-        className='bg-[#EB6383] rounded-[30px] flex justify-center items-center py-3 w-full hover:bg-[#EB6383]/40'
+        className='bg-buttonSecondary rounded-[30px] flex justify-center items-center py-3 w-full hover:bg-buttonSecondary/40'
         aria-label='Delete product'
       >
         <p className='font-outfit font-semibold text-[18px] sm:text-[20px] text-white'>
@@ -59,7 +59,7 @@ export default function AddToCard({ product }: AddToCardProps) {
   return (
     <button
       onClick={handleAddProduct}
-      className='bg-[#059669] rounded-[30px] flex justify-center items-center py-3 w-full hover:opacity-70'
+      className='bg-buttonPrimary rounded-[30px] flex justify-center items-center py-3 w-full hover:opacity-70'
       aria-label='Add product'
     >
       <p className='font-outfit font-semibold text-[18px] sm:text-[20px] text-white'>

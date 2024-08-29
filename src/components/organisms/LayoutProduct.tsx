@@ -28,12 +28,12 @@ export default function LayoutProduct({ products }: LayoutProductProps) {
               />
             );
           })}
-        <div className='w-full h-full flex justify-center items-center'>
-          <AddMoreProducts
-            products={allProducts.length}
-            setAllProducts={setAllProducts}
-          />
-        </div>
+      </div>
+      <div className='w-full flex justify-center items-center mt-5'>
+        <AddMoreProducts
+          products={allProducts.length}
+          setAllProducts={setAllProducts}
+        />
       </div>
     </section>
   );
