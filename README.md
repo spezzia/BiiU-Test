@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BiiU - Test front end
 
-## Getting Started
+## Steps to run the project
 
-First, run the development server:
+1. Download node.js
+   Go to https://nodejs.org/en, install node.js in your computer.
+2. Clone the project in your computer.
+3. Open a terminal and move to the cloned project.
+4. Install all dependencies.
+   ```javascript
+   	npm run install
+   ```
+5. Run the project in dev mode.
+   ```javascript
+   	npm run dev
+   ```
+6. Open your browser and go to localhost:3001
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+_The project is actually running on Vercel. [Live Demo](https://bii-u-test.vercel.app/ 'Live Demo')_
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## About the project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project is develop with [Nextjs v14](https://nextjs.org/ 'Nextjs') with [Tailwind](https://tailwindcss.com/ 'Tailwind'). In this project, react context was used to manage all products in the cart, and total price to pay. In the context, `useReducer` helps to manage the different actions that the cart can perform and `useState` keeps track of the total amount of the products in the cart.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The products in the project are from [FakeStoreApi](https://fakestoreapi.com/ 'FakeStoreApi'). [Axios](https://axios-http.com/ 'Axios') was added to handle all API requests and promises.
 
-## Learn More
+#### Pages
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Home page.** Shows you all products in the shop. You can load more products, add items to your favorites, and go to view product details.
+- **Product page.** Shows you details about a product. You can add it to your cart and delete it if needed.
+- **Cart page.** Shows you all products that you have added. You can delete a product, change the number of items, and proceed to checkout.
