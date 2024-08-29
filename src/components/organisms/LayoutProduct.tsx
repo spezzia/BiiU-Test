@@ -1,19 +1,40 @@
-import { TypeProduct } from "@/app/page";
-import Product from "../molecules/Product";
+'use client';
+
+import { TypeProduct } from '@/app/page';
+import Product from '../molecules/Product';
+import { useState } from 'react';
+import AddMoreProducts from '../atoms/AddMoreProducts';
 
 interface LayoutProductProps {
   products: TypeProduct[];
 }
 
-export default function LayoutProduct({products}:LayoutProductProps) {
+export default function LayoutProduct({ products }: LayoutProductProps) {
+  const [allProducts, setAllProducts] = useState<TypeProduct[]>(products);
+
   return (
-    <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-5 gap-y-5 md:gap-20 justify-center">
-      {Array.isArray(products) &&
-        products.map((prod) => {
-          return (
-            <Product key={prod.id} id={prod.id} url={prod.image} name={prod.title} price={prod.price} category={prod.category} />
-          );
-        })}
+    <section className=''>
+      <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-5 gap-y-5 md:gap-20 justify-center'>
+        {Array.isArray(allProducts) &&
+          allProducts.map((prod) => {
+            return (
+              <Product
+                key={prod.id}
+                id={prod.id}
+                url={prod.image}
+                name={prod.title}
+                price={prod.price}
+                category={prod.category}
+              />
+            );
+          })}
+        <div className='w-full h-full flex justify-center items-center'>
+          <AddMoreProducts
+            products={allProducts.length}
+            setAllProducts={setAllProducts}
+          />
+        </div>
+      </div>
     </section>
   );
 }
