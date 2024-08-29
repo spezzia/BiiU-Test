@@ -1,6 +1,7 @@
 import { GetProducts, GetProductsByID } from '@/api/project/products';
 import { TypeProduct } from '@/app/page';
 import LayoutDescriptionProduct from '@/components/organisms/LayoutDescriptionProduct';
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
@@ -13,6 +14,10 @@ export async function generateStaticParams() {
   }
   return [];
 }
+
+export const metadata: Metadata = {
+  title: 'Product',
+};
 
 export default async function DetailProduct({
   params,
