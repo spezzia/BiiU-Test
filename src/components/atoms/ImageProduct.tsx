@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 interface ImageProductProps {
   url: string;
@@ -16,8 +16,9 @@ export default function ImageProduct({
       src={url}
       className={className}
       alt={alt}
-      objectFit="contain"
+      objectFit='contain'
       fill
+      loading='lazy'
     />
   );
 }

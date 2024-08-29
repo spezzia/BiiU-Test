@@ -1,30 +1,39 @@
-"use client"
+'use client';
 
-import { ProductActionKind, useCartShop } from "@/context/CartShop/CartShopContext";
-import { FaRegTrashAlt } from "react-icons/fa";
+import {
+  ProductActionKind,
+  useCartShop,
+} from '@/context/CartShop/CartShopContext';
+import { FaRegTrashAlt } from 'react-icons/fa';
 
 interface ButtonDeleteProductProps {
-    id: number
+  id: number;
 }
 
-export default function ButtonDeleteProduct({id}: ButtonDeleteProductProps){
+export default function ButtonDeleteProduct({ id }: ButtonDeleteProductProps) {
+  const { actionProduct } = useCartShop();
 
-    const { actionProduct } = useCartShop()
+  const handleDeleteProduct = () => {
+    actionProduct({
+      type: ProductActionKind.remove,
+      product: {
+        productId: id,
+        quantity: 0,
+        image: '',
+        name: '',
+        price: 0,
+      },
+    });
+  };
 
-    const handleDeleteProduct = () =>{
-        actionProduct({type:ProductActionKind.remove,product:{
-            productId: id,
-            quantity: 0,
-            image: "",
-            name: "",
-            price: 0
-        } })
-    }
-
-    return(
-        <button type="button" className="w-fit cursor-pointer hover:opacity-70" onClick={handleDeleteProduct}>
-            <FaRegTrashAlt className="text-[27px] text-[#059669]" />
-        </button>
-    )
+  return (
+    <button
+      type='button'
+      aria-label='Delete product'
+      className='w-fit cursor-pointer hover:opacity-70'
+      onClick={handleDeleteProduct}
+    >
+      <FaRegTrashAlt className='text-[27px] text-[#059669]' />
+    </button>
+  );
 }
-

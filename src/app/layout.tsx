@@ -1,12 +1,16 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import './globals.css';
 import { CartShopProvider, Product } from '@/context/CartShop/CartShopContext';
-import { GetProducts } from '@/api/project/products';
 import Navbar from '@/components/organisms/Navbar';
 import { Toaster } from 'react-hot-toast';
+import Link from 'next/link';
 
-const inter = Inter({ subsets: ['latin'] });
+const outfit = Outfit({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-outfit',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +23,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' className={`${outfit.variable}`}>
       <body className='w-full bg-white px-0'>
         <CartShopProvider>
           <Navbar />

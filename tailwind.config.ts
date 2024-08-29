@@ -8,11 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily:{
-        outfit:['Outfit','sans-serif']
+      fontFamily: {
+        outfit: ['var(--font-outfit)'],
       },
-      colors:{
-        bgImageProduct:'#F6F6F6'
+      colors: {
+        bgImageProduct: '#F6F6F6'
       }
     },
   },
