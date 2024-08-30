@@ -22,6 +22,7 @@ const config: Config = {
         textSecondary: '#10B981',
         textDark: '#0F172A',
         textDisable: '#767676',
+        textError: '#EB6383',
         borderPrimary: '#767676',
         iconPrimary: '#94A3B8',
       }

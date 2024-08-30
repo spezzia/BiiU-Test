@@ -52,5 +52,8 @@ export function reducerProducts(
       return [];
     }
   }
+  if (action.type === "deleteAll") {
+    return [];
+  }
   return state;
 }

@@ -59,7 +59,7 @@ export default function RowTableCart({
             {TransformNumberToPriceFormat(price * quantity)}
           </p>
         </div>
-        <div className='w-[150px] hidden lg:flex justify-center'>
+        <div className='w-[150px] flex justify-center'>
           <ButtonDeleteProduct id={id} />
         </div>
       </div>

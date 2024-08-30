@@ -1,5 +1,3 @@
-import { TypeProduct } from '@/app/page';
-
 export default function ButtonCheckout() {
   return (
     <button

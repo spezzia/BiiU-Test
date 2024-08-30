@@ -24,8 +24,11 @@ This project is develop with [Nextjs v14](https://nextjs.org/ 'Nextjs') with [Ta
 
 The products in the project are from [FakeStoreApi](https://fakestoreapi.com/ 'FakeStoreApi'). [Axios](https://axios-http.com/ 'Axios') was added to handle all API requests and promises.
 
+The authentication is handled by [Firebase](https://firebase.google.com/docs/auth?hl=es-419http:// 'Firebase') because it is an easy solution.
+
 #### Pages
 
 - **Home page.** Shows you all products in the shop. You can load more products, add items to your favorites, and go to view product details.
 - **Product page.** Shows you details about a product. You can add it to your cart and delete it if needed.
 - **Cart page.** Shows you all products that you have added. You can delete a product, change the number of items, and proceed to checkout.
+- **Login Page.** Provides an interface to access the platform using an email and password.

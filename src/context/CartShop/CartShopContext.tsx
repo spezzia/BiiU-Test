@@ -14,6 +14,7 @@ export enum ProductActionKind {
   add = 'add',
   remove = 'remove',
   update = 'update',
+  deleteAll = 'deleteAll',
 }
 
 export interface ProductAction {
