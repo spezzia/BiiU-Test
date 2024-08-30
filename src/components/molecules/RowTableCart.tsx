@@ -39,9 +39,12 @@ export default function RowTableCart({
             <p className='font-outfit font-semibold text-[18px] sm:text-[20px] lg:text-[24px] text-black line-clamp-2  lg:line-clamp-1'>
               {productName}
             </p>
-            <p className='md:hidden font-outfit font-normal text-[18px] sm:text-[20px] lg:text-[24px] text-black'>
+            <p className='lg:hidden mt-4 font-outfit font-normal text-[18px] sm:text-[20px] lg:text-[24px] text-black'>
               {TransformNumberToPriceFormat(price)}
             </p>
+            <div className='lg:hidden mt-4'>
+              <ButtonDeleteProduct id={id} />
+            </div>
           </div>
         </div>
         <div className='lg:w-[150px] hidden lg:flex justify-center'>
@@ -59,7 +62,7 @@ export default function RowTableCart({
             {TransformNumberToPriceFormat(price * quantity)}
           </p>
         </div>
-        <div className='w-[150px] flex justify-center'>
+        <div className='w-[150px] hidden lg:flex justify-center'>
           <ButtonDeleteProduct id={id} />
         </div>
       </div>

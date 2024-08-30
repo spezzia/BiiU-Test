@@ -18,13 +18,15 @@
 
 _The project is actually running on Vercel. [Live Demo](https://bii-u-test.vercel.app/ 'Live Demo')_
 
+_user: test-biiu@gmail.com password:TestBiiu123._
+
 ## About the project
 
-This project is develop with [Nextjs v14](https://nextjs.org/ 'Nextjs') with [Tailwind](https://tailwindcss.com/ 'Tailwind'). In this project, react context was used to manage all products in the cart, and total price to pay. In the context, `useReducer` helps to manage the different actions that the cart can perform and `useState` keeps track of the total amount of the products in the cart.
+This project is develop with [Nextjs v14](https://nextjs.org/ 'Nextjs') with [Tailwind](https://tailwindcss.com/ 'Tailwind'). In this project, react context was used to manage all products in the cart, total price to pay and the user's authentication state. In the context, `useReducer` helps to manage the different actions that the cart can perform and `useState` keeps track of the total amount of the products in the cart.
 
 The products in the project are from [FakeStoreApi](https://fakestoreapi.com/ 'FakeStoreApi'). [Axios](https://axios-http.com/ 'Axios') was added to handle all API requests and promises.
 
-The authentication is handled by [Firebase](https://firebase.google.com/docs/auth?hl=es-419http:// 'Firebase') because it is an easy solution.
+The authentication is handled by [Firebase](https://firebase.google.com/docs/auth?hl=es-419http:// 'Firebase') because it is an easy solution.[ React hook form](https://react-hook-form.com/http:// ' React hook form') helps with validations and state of the form.
 
 #### Pages
 

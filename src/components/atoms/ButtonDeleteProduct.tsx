@@ -33,7 +33,7 @@ export default function ButtonDeleteProduct({ id }: ButtonDeleteProductProps) {
       className='w-fit cursor-pointer hover:opacity-70'
       onClick={handleDeleteProduct}
     >
-      <FaRegTrashAlt className='text-[27px] text-[#059669]' />
+      <FaRegTrashAlt className='text-[20px] sm:text-[27px] text-[#059669]' />
     </button>
   );
 }
