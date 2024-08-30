@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { IoPersonOutline, IoSearchOutline } from 'react-icons/io5';
 import CartItemsNavigation from '../atoms/CartItemsNavigation';
 import PathName from '../atoms/PathNav';
+import UserIconNavigation from '../atoms/UserIconNavigation';
 
 export default function Navbar() {
   return (
@@ -9,7 +10,7 @@ export default function Navbar() {
       <PathName href='/' path='Home' />
       <div className='flex flex-row gap-5'>
         <IoSearchOutline className='text-[25px] text-iconPrimary' />
-        <IoPersonOutline className='text-[25px] text-iconPrimary' />
+        <UserIconNavigation />
         <CartItemsNavigation />
       </div>
     </nav>

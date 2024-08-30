@@ -5,9 +5,20 @@ import HeadersTableCart from '../molecules/HeadersTableCart';
 import { useCartShop } from '@/context/CartShop/CartShopContext';
 import FooterTableCart from '../molecules/FooterTableCart';
 import NoProductsCart from '../molecules/NoProductsCart';
+import { useUserContext } from '@/context/User/UserContext';
+import NoAccess from '../molecules/NoAccess';
 
 export default function ListCardProducts() {
   const { products } = useCartShop();
+  const { isAuthenticated } = useUserContext();
+
+  if (!isAuthenticated || isAuthenticated === null) {
+    return (
+      <section>
+        <NoAccess />
+      </section>
+    );
+  }
 
   return (
     <section className='w-full px-10'>

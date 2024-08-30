@@ -5,6 +5,7 @@ import {
   ProductActionKind,
   useCartShop,
 } from '@/context/CartShop/CartShopContext';
+import { useUserContext } from '@/context/User/UserContext';
 import toast from 'react-hot-toast';
 
 interface AddToCardProps {
@@ -13,8 +14,13 @@ interface AddToCardProps {
 
 export default function AddToCard({ product }: AddToCardProps) {
   const { products, actionProduct } = useCartShop();
+  const { isAuthenticated } = useUserContext();
 
   const handleAddProduct = () => {
+    if (!isAuthenticated) {
+      toast.error('You must be logged in to do this action.');
+      return;
+    }
     actionProduct({
       type: ProductActionKind.add,
       product: {
@@ -29,6 +35,10 @@ export default function AddToCard({ product }: AddToCardProps) {
   };
 
   const handleDeleteProduct = () => {
+    if (!isAuthenticated) {
+      toast.error('You must be logged in to do this action.');
+      return;
+    }
     actionProduct({
       type: ProductActionKind.remove,
       product: {

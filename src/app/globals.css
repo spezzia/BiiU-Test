@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .inputBase {
+    @apply font-outfit font-normal text-[16px] lg:text-[18px] text-textPrimary w-full py-3 px-3 rounded-lg border-2 border-borderPrimary my-2 focus:outline-none focus:border-buttonPrimary placeholder:text-textDisable;
+  }
+}

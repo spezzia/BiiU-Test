@@ -5,6 +5,7 @@ import { CartShopProvider, Product } from '@/context/CartShop/CartShopContext';
 import Navbar from '@/components/organisms/Navbar';
 import { Toaster } from 'react-hot-toast';
 import Link from 'next/link';
+import { UserContextProvider } from '@/context/User/UserContext';
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -28,11 +29,13 @@ export default async function RootLayout({
   return (
     <html lang='en' className={`${outfit.variable}`}>
       <body className='w-full bg-white px-0'>
-        <CartShopProvider>
-          <Navbar />
-          {children}
-        </CartShopProvider>
-        <Toaster position='bottom-center' reverseOrder={false} />
+        <UserContextProvider>
+          <CartShopProvider>
+            <Navbar />
+            {children}
+          </CartShopProvider>
+          <Toaster position='bottom-center' reverseOrder={false} />
+        </UserContextProvider>
       </body>
     </html>
   );
